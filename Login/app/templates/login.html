@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	{% if not login %}
+	{%if err%}
+		<p><span>{{err}}</span></p>
+	{%endif%}
+	<form action="" method="POST">
+		<input id="ilogin" class="input" type="text" name="log" placeholder="Login"><br>
+
+		<input id="ipassword" class="input" type="password" name="pass" placeholder="Password"><br>
+
+		<button id="bsubmit" class="button">Submit</button>
+		<a href="register">Registrar</a>
+		{%csrf_token%}
+	</form>
+	{%else%}
+		<div><span><a href="/logout_view">Sair</a></span></div>
+		<h1>Login Success!</h1>
+		<h2>
+			Consectetur molestiae accusantium nobis delectus nostrum. Quisquam eius provident magni necessitatibus nesciunt quidem iusto? Quod doloribus officia excepturi odio soluta id praesentium? Ipsum quaerat id sunt obcaecati consequuntur. Explicabo quo.
+		</h2>
+	{%endif%}
+</body>
+</html>

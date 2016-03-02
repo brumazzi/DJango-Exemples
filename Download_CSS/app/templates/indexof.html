@@ -1,0 +1,17 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	<title></title>
+</head>
+<body>
+	<h1>IndexOf</h1>
+	<ul>
+		{%for link in link_list%}
+			<strong><a href="{{link.path}}"><li>{{link.name}}</li></a></strong>
+		{%endfor%}
+	</ul>
+</body>
+</html>

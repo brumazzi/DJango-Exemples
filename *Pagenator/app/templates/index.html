@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	{% if paginator.has_previous %}
+		<div><a href="/{{paginator.previous_page_number}}">Anterior</a></div>
+	{% else %}
+		Anterior
+	{% endif %}
+	|{{paginator.number}}..{{paginator.num_pages}}|
+	{% if paginator.has_next %}
+		<div><a href="/{{paginator.previous_page_number}}">Proxima</a></div>
+	{% else %}
+		Proxima
+	{% endif %}
+	<section>
+		{% for x in article %}
+		<article>
+			<h1>{{x.title}}</h1>
+			<p>{{x.author}}</p>
+			<p>{{x.content}}</p>
+		</article>
+		{% endfor %}
+	</section>
+</body>
+</html>

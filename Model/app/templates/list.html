@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<table border=1>
+		<tr>
+			<td>Titulo</td>
+			<td>Url</td>
+			<td>Publicado</td>
+			<td>Autores</td>
+			<td>Agencia</td>
+		</tr>
+		{% for x in articles %}
+			<tr>
+				<td>{{x.titulo}}</td>
+				<td>{{x.url}}</td>
+				<td>{{x.pub_date}}</td>
+				<td>
+					{% for y in x.autores.all %}
+						{{y}}|
+					{% endfor %}
+				</td>
+				<td>{{x.agencia}}</td>
+			</tr>
+			{{x.autores}}
+		{% endfor %}
+	</table>
+</body>
+</html>

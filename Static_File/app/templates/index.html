@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{% static 'admin/css/base.css' %}">
+	<link rel="stylesheet" href="{% static 'admin/css/forms.css' %}">
+	<link rel="stylesheet" href="{% static 'admin/css/widgets.css' %}">
+	<link rel="stylesheet" href="{% static 'admin/css/fonts.css' %}">
+	<link rel="stylesheet" href="{% static 'css/more.css' %}">
+	<title></title>
+</head>
+<body>
+	<form action="">
+		<input id="i1" type="text" name="name" placeholder="Nome">
+		<input id="i2" type="text" name="email" placeholder="Email">
+		<textarea id="m1" name="memo" cols="30" rows="10" placeholder="Comentario"></textarea>
+		<input type="submit" value="enviar">
+	</form>
+</body>
+</html>

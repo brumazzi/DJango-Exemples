@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<form action="" method="POST">
+		<input type="" name="inp1" required>
+		<input type="" name="inp2" required>
+		<input type="" name="inp3">
+		<input type="" name="inp4">
+		<input type="" name="inp5" required>
+		{% csrf_token %}
+		<input type="submit" value="Enviar">
+	</form>
+	<ul>
+	{%for x in post%}
+		<li>{{x.input}} - {{x.value}}</li>
+	{%endfor%}
+	</ul>
+</body>
+</html>

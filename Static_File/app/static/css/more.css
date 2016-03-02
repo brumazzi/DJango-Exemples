@@ -1,0 +1,20 @@
+form {
+	width: 26rem;
+	margin: auto;
+	margin-top: 6rem;
+}
+
+form input, form textarea{
+	max-width: 26rem;
+	min-width: 26rem;
+	max-height: 16rem;
+}
+
+form textarea{
+	min-height: 16rem;
+}
+
+form input[type='submit']{
+	max-width: 26.9rem;
+	min-width: 26.9rem;
+}

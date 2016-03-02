@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<ul>
+		{%for x in list%}<li>{{x.nome}}
+			<ul>
+				{%for y in x.keys%}<li>{{y.data}}</li>{%endfor%}
+			</ul>
+		</li>{%endfor%}
+	</ul>
+</body>
+</html>

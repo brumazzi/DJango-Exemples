@@ -1,0 +1,10 @@
+<!doctype html>
+{% if list %}
+	<ul>
+	{% for question in list %}
+		<li>{{question.id}} - {{question.name}} - {{question.url}}</li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>No polls are avaliable.</p>
+{% endif %}

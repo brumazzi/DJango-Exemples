@@ -1,0 +1,1 @@
+para importar o arquivo css, basta configurar a variavel STATIC_ROOT com o caminho da sua pasta estatica.

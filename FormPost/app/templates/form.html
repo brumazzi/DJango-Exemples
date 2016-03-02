@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<form action="/form/" method="POST">
+		<table>
+			{{form}}
+		</table>
+		{% csrf_token %}
+		<input type="submit" value="enviar">
+	</form>
+	{% if send %}<h1>Email Enviado com sucesso!</h1>{% endif %}
+</body>
+</html>
